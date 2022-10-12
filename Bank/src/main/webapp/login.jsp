@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; width: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,15 +14,15 @@
 <link rel="stylesheet" href="../../../css/mdb.min.css" />
 <title>Login</title>
 </head>
-<body>
+<body style="height: 100%; width: 100%;">
 <%
 Boolean auth = (Boolean) request.getSession().getAttribute("auth");
 %>
 <x:NavBar isLoggedIn = 'login' menu = 'none' account = 'false' ></x:NavBar>
-<section class="">
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+<section style="height: 100%; width: 100%;">
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="height: 100%; width: 100%; background-color: hsl(0, 0%, 96%); display: flex; justify-content: center; align-items: center;">
     <div class="container">
-      <div class="row gx-lg-5 align-items-center">
+    <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <h1 class="my-5 display-3 fw-bold ls-tight">
             The best place <br />
@@ -39,13 +39,13 @@ Boolean auth = (Boolean) request.getSession().getAttribute("auth");
               %>
               <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3">User Name</label>
-                  <input type="text" id="form3Example3" class="form-control" name = "user" value="<%= (request.getParameter("user") == null) ? "" : request.getParameter("user")%>"/>
+                  <input type="text" id="form3Example3" class="form-control" name = "user" placeholder="Enter your username" value="<%= (request.getParameter("user") == null) ? "" : request.getParameter("user")%>"/>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4">Password</label>
-                  <input type="password" id="form3Example4" class="form-control" name = "pwd" value="<%= (request.getParameter("pwd") == null) ? "" : request.getParameter("pwd")%>"/>
+                  <input type="password" id="form3Example4" class="form-control" name = "pwd" placeholder="Enter your password" value="<%= (request.getParameter("pwd") == null) ? "" : request.getParameter("pwd")%>"/>
                 </div>
               
               <%}
@@ -77,12 +77,10 @@ Boolean auth = (Boolean) request.getSession().getAttribute("auth");
             </div>
           </div>
         </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Jumbotron -->
 </section>
-<!-- Section: Design Block -->
 <% request.getSession().invalidate(); %>
 </body>
 </html>

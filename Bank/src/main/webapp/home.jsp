@@ -18,7 +18,7 @@
 	<x:NavBar isLoggedIn = 'home' menu = 'none' usr='none' account = 'false'></x:NavBar>
 	<section style="width: 100%; height: 100%;">
 	  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%); height: 100%; width: 100%;">
-	    <div class="container" style="width: 100%; height: 100%;">
+	    <div class="container" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
 	      <div class="row gx-lg-5 align-items-center">
 	        <div class="col-lg-6 mb-5 mb-lg-0">
 	          <h1 class="my-5 display-3 fw-bold ls-tight">

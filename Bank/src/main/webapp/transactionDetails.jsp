@@ -3,7 +3,7 @@
      <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
      <%@ page import="com.transactiondetails.TransactionDao,java.sql.ResultSet" %>
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,22 +14,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
 <title>Transaction Details</title>
 </head>
-<body>
+<body style="width: 100%; height: 100%;">
 <% 
 TransactionDao td = new TransactionDao(); 
 String usr = (String) request.getSession().getAttribute("user");
 ResultSet rs = td.transactionDao(usr);
 %>	
-	<x:NavBar isLoggedIn = 'logged' menu = 'transactionDetails' usr = "<%=usr%>" account ='true'></x:NavBar>
+<x:NavBar isLoggedIn = 'logged' menu = 'transactionDetails' usr = "<%=usr%>" account ='true'></x:NavBar>
 <%if(rs.next()){%>
-<section class="">
-<div style="text-align: center; background-color: hsl(0, 0%, 96%); margin-top: 10px;">
-<input type="button" onclick="generate()" value="Export To PDF" class="btn btn-primary" style="display: inline; border: none; float: center;"/>
-  </div>
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-    <div class="container" style="margin-left: 25%">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
+<section style="width: 100%; height: 100%;">
+<div style="text-align: center; background-color: hsl(0, 0%, 96%); padding-top: 48px;">
+<input type="button" onclick="generate()" value="Export To PDF" class="btn btn-primary" style="padding: 10px; display: inline; border: none; float: center;"/>
+</div>
+  <div class="px-4 py-5 px-md-5 text-lg-start" style="width: 100%; height: 100%; background-color: hsl(0, 0%, 96%);">
+    <div class="container">
+    <div class="bg-primary text-center" style="border-radius: 5px 5px 0 0; padding: 10px;">
+      	<h1 class="text-white" >Transaction Details</h1>
+    	</div>
           <table class="table table-bordered table-hover" id="transactions">
           <thead>
       		<tr>
@@ -72,8 +73,7 @@ ResultSet rs = td.transactionDao(usr);
      	</table>
         </div>
       </div>
-    </div>
-  </div>
+      </div>
 </section>
 	<% }
 	else{%>

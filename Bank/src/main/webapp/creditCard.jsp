@@ -2,19 +2,21 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 100%;">
 <head>
 <meta charset="UTF-8">
 <title>Credit Card</title>
 </head>
-<body>
+<body style="width: 100%; height: 100%;">
 <% String usr = (String) request.getSession().getAttribute("user");%>
 	<x:NavBar isLoggedIn = 'logged' menu = 'creditCard' usr = "<%=usr%>" account ='true'></x:NavBar>
-	<section class="">
-  	<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
+	<section style="width: 100%; height: 100%;">
+  	<div class="px-4 py-5 px-md-5 text-lg-start" style="width: 100%; height: 100%;background-color: hsl(0, 0%, 96%);display: flex; justify-content: center; align-items: center;">
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="bg-primary text-center" style="border-radius: 5px 5px 0 0; padding: 10px;">
+      	<h1 class="text-white" >Create a New Credit Card</h1>
+    	</div>
           <div class="card">
             <div class="card-body py-5 px-md-5">
               <form action ="CreditCardServlet">
@@ -46,8 +48,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Jumbotron -->
 </section>
 </body>
 </html>

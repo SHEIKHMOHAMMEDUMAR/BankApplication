@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; width: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../../css/mdb.min.css" />
 <title>Open Account</title>
 </head>
-<body>
+<body style="height: 100%; width: 100%;">
 <%
 String usr = (String) request.getSession().getAttribute("user");
 Boolean auth = (Boolean) request.getSession().getAttribute("oauth");
@@ -23,11 +23,13 @@ System.out.println("user:"+usr);
 System.out.println("auth:"+auth);
 %>
 <x:NavBar isLoggedIn = 'logged' menu = 'transactionDetails' usr = "<%=usr%>" account ='false'></x:NavBar>
-<section class="">
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
+<section style="height: 100%; width: 100%;">
+  <div class="px-4 py-5 px-md-5 text-lg-start" style="height: 100%; width: 100%;background-color: hsl(0, 0%, 96%); display: flex; justify-content: center; align-items: center;">
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <div class="col-lg-6 mb-5 mb-lg-0">
+    <div class="bg-primary text-center" style="border-radius: 5px 5px 0 0; padding: 10px;">
+      	<h1 class="text-white" >Open a New Account</h1>
+    	</div>
           <div class="card">
             <div class="card-body py-5 px-md-5">
               <form action ="OpenAccountServlet">
@@ -134,7 +136,6 @@ System.out.println("auth:"+auth);
         </div>
       </div>
     </div>
-  </div>
 </section>
 </body>
 </html>

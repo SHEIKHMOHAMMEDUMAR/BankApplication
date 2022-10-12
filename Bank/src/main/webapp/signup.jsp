@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; width: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../../css/mdb.min.css" />
 <title>Sign Up</title>
 </head>
-<body>
+<body style="height: 100%; width: 100%;">
 <%
 String auth = (String) request.getSession().getAttribute("auth1");
 if(auth == null || auth.equals("unauthi") || auth.equals("alused")){
@@ -27,8 +27,8 @@ else{%>
 <%}
 %>
 <!-- Section: Design Block -->
-<section class="">
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+<section style="height: 100%; width: 100%;">
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="height: 100%; width: 100%; background-color: hsl(0, 0%, 96%); display: flex; justify-content: center; align-items: center;">
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -47,17 +47,17 @@ else{%>
               %>
               <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3">User Name</label>
-                  <input type="text" id="form3Example3" class="form-control" name = "user" value="<%= (request.getParameter("user") == null) ? "" : request.getParameter("user")%>"/>
+                  <input type="text" id="form3Example3" class="form-control" name = "user" placeholder="Enter your username" value="<%= (request.getParameter("user") == null) ? "" : request.getParameter("user")%>"/>
               </div>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4">Password</label>
-                  <input type="password" id="form3Example4" class="form-control" name = "pwd" value="<%= (request.getParameter("pwd") == null) ? "" : request.getParameter("pwd")%>"/>
+                  <input type="password" id="form3Example4" class="form-control" name = "pwd" placeholder="Enter your password" value="<%= (request.getParameter("pwd") == null) ? "" : request.getParameter("pwd")%>"/>
                 </div>
                 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4">Re-Password</label>
-                  <input type="password" id="form3Example4" class="form-control" name = "rpwd" value="<%= (request.getParameter("rpwd") == null) ? "" : request.getParameter("rpwd")%>"/>
+                  <input type="password" id="form3Example4" class="form-control" name = "rpwd"  placeholder="Re-enter password" value="<%= (request.getParameter("rpwd") == null) ? "" : request.getParameter("rpwd")%>"/>
                 </div>
               
               <%}
@@ -77,7 +77,7 @@ else{%>
                 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4">Re-Password</label>
-                  <input type="password" id="form3Example4" class="form-control is-invalid" name = "rpwd" value="<%= (request.getParameter("rpwd") == null) ? "" : request.getParameter("rpwd")%>" aria-describedby="userPasswordHelp" placeholder="Enter your password" required/>
+                  <input type="password" id="form3Example4" class="form-control is-invalid" name = "rpwd" value="<%= (request.getParameter("rpwd") == null) ? "" : request.getParameter("rpwd")%>" aria-describedby="userPasswordHelp" placeholder="Re-enter password" required/>
                 </div>
                 <div class="text-center">
                   <p>Invalid input</p>
