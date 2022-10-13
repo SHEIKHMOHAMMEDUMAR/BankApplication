@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,11 +14,12 @@
 <link rel="stylesheet" href="index1.css">
 <title>Balance Successful</title>
 </head>
-<body>
+<body style="width: 100%; height: 100%;">
 <% String usr = (String) request.getSession().getAttribute("user"); 
 Double bal = (Double) request.getSession().getAttribute("bal"); %>
 <x:NavBar isLoggedIn = 'logged' menu = 'checkBalance' usr = "<%=usr%>" account ='true'></x:NavBar>
-  <div class="wrapper"> 
+  <div style="width: 100%; height: 100%; background-color: #eee;">
+  <div class="wrapper" style="display: flex; justify-content: center; align-items: center;"> 
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> 
             <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> 
             <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -26,6 +27,7 @@ Double bal = (Double) request.getSession().getAttribute("bal"); %>
     </div>
     <div class='text-center'>
 	<h1 style='color: #7ac142; background-color:#eee'>Your Balance: <%=bal%></h1>
+	</div>
 	</div>
 </body>
 </html>

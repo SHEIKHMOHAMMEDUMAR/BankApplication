@@ -24,7 +24,8 @@
         </svg>
     </div>
     <div class='text-center' style = "margin-bottom: 10px">
-	<h1 style='color: red; background-color:#eee'>Incorrect Credentials</h1>
+<h1 style='color: red; background-color:#eee'>Insufficent Fund</h1>
+	<h3 style='color: red; background-color:#eee'>Minimum balance should be: 1000 </h3>
 	</div>
 </body>
 </html>

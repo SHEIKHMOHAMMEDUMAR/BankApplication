@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
      <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="width:100%; height:100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../../css/mdb.min.css" />
 <title>Logged into JDBC Bank</title>
 </head>
-<body>
+<body style="width:100%; height:100%;">
 <% 
 String usr = (String) request.getSession().getAttribute("user");
 Boolean account = (Boolean) request.getSession().getAttribute("account");
@@ -26,25 +26,40 @@ if(account == null || account == false ){
 else{
 	 %>
 	<x:NavBar isLoggedIn = 'logged' menu = 'none' usr = "<%=usr%>" account ='true'></x:NavBar>
-	
 <% 
 }
 %>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="background-color: hsl(0,0%,90%);">
-  <div class="carousel-inner">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:100%; height:100%; background-color: hsl(0,0%,90%);">
+  <div class="carousel-inner bg-muted" style="width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
     <div class="carousel-item active">
-      <div style="width:100%; background-color: primary;">
-     Hello
+      <div class="text-center" style="width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Pablo Escobar Bank<br />
+            <span class="text-primary">makes your finances smooth</span>
+            <h6>and secures your black money</h6>
+          </h1>
+        </div>
       </div>
     </div>
     <div class="carousel-item">
-      <div style="width:100%; background-color: primary;">
-     Hello
+      <div class="text-center" style="width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Credit Card<br />
+            <span class="text-primary"> With No Credit Score</span>
+          </h1>
+        </div>
       </div>
     </div>
     <div class="carousel-item">
-      <div style="width:100%; background-color: primary;">
-     Hello
+      <div class="text-center" style="width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Manage your transactions<br />
+            <span class="text-primary">with our intelligent transaction analytics</span>
+          </h1>
+        </div>
       </div>
     </div>
   </div>

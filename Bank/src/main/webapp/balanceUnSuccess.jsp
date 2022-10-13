@@ -12,19 +12,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
 <link rel="stylesheet" href="index2.css">
-<title>Balance Unsuccessful</title>
+<title>Unsuccessful</title>
 </head>
 <body>
 <%String usr = (String) request.getSession().getAttribute("user");%>
-<x:NavBar isLoggedIn = 'logged' menu = 'checkBalance' usr =<%=usr%>account ='true'></x:NavBar>
-  <div class="wrapper"> 
+<x:NavBar isLoggedIn = 'logged' menu = 'checkBalance' usr = "<%=usr%>" account ='true'></x:NavBar>
+  <div style="width: 100%; height: 100%; background-color: #eee;">
+  <div class="wrapper" style="display: flex; justify-content: center; align-items: center;"> 
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> 
             <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
             <path class="checkmark_check" fill="none" d="M14.1 14.1l23.8 23.8 m0,-23.8 l-23.8,23.8"/>
         </svg>
     </div>
     <div class='text-center' style = "margin-bottom: 10px">
-	<h1 style='color: red; background-color:#eee'>Incorrect Credentials</h1>
+	<h1 style='color: red; background-color:#eee'>Insufficent Fund</h1>
+	<h3 style='color: red; background-color:#eee'>Minimum balance should be: 1000 </h3>
 	</div>
+	  </div>
 </body>
 </html>

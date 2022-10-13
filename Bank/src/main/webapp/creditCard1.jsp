@@ -33,7 +33,7 @@ String cardCVV = rs.getString(3);
 <div class="flip-card-front">
 <div class="card" style="background-image: linear-gradient(to bottom right,blue,black,purple); justify-content: center; align-items: center;">
   <div class="card-body" style="display: inline-block;">
-    <h2 class="card-title text-white">JDBC Bank</h2>
+    <h2 class="card-title text-white">Pablo Escobar Bank</h2>
     <h3 class="card-subtitle mb-2 text-muted">Credit Card</h3>
     <h2 class="card-text text-white"><%=cardName%></h2>
     <h3 class="card-subtitle mb-2 text-muted">Credit Card No:</h3> 
@@ -45,7 +45,7 @@ String cardCVV = rs.getString(3);
 <div class="flip-card-back">
  <div class="card" style="background-image: linear-gradient(to bottom right,blue,black,purple); justify-content: center; align-items: center;">
   <div class="card-body" style="display: inline-block;">
-    <h2 class="card-title text-white">JDBC Bank</h2>
+    <h2 class="card-title text-white">Pablo Escobar Bank</h2>
     <h3 class="card-subtitle mb-2 text-muted">Credit Card</h3>
     <h2 class="card-text text-white"><%=cardName%></h2>
     <h3 class="card-subtitle mb-2 text-muted">CVV:</h3>

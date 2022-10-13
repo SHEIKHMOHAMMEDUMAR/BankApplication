@@ -34,7 +34,7 @@ public class MyNavBar extends TagSupport{
     		+ "<nav class='navbar navbar-expand-lg navbar-dark bg-primary'>");
 	    	
 	    	if(isLoggedIn.equals("home")) {
-	        out.print("<a class='navbar-brand' href='home.jsp'>JDBC Bank</a>"
+	        out.print("<a class='navbar-brand' href='home.jsp'>Pablo Escobar Bank</a>"
 	        		+ "<div class='collapse navbar-collapse justify-content-end' id='navbarNavDropdown'>"
 	        		+ "    <ul class='navbar-nav'>"
 	        		+ "      <li class='nav-item active'>"
@@ -50,7 +50,7 @@ public class MyNavBar extends TagSupport{
 	        
 	    	}
 	    	else if(isLoggedIn.equals("login") || isLoggedIn.equals("signup")){
-	    		out.println("<a class='navbar-brand' href='home.jsp'>JDBC Bank</a>"
+	    		out.println("<a class='navbar-brand' href='home.jsp'>Pablo Escobar Bank</a>"
 	    				+ "</nav>"
 	    				+ "</body>");
 	    	}
@@ -88,7 +88,7 @@ public class MyNavBar extends TagSupport{
 					break;
     			}
     			
-    		out.print("<a class='navbar-brand' href='loggedIn.jsp'>JDBC Bank</a>"
+    		out.print("<a class='navbar-brand' href='loggedIn.jsp'>Pablo Escobar Bank</a>"
     				+ "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>"
     				+ "<span class='navbar-toggler-icon'></span>-"
     				+ "</button>"
