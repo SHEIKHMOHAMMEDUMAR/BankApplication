@@ -39,7 +39,7 @@ public class SignupServlet extends HttpServlet {
 				boolean b =sud.signUpDao(u);
 				if(b) {
 					request.getSession().setAttribute("auth1", "authi");
-					request.getSession().setAttribute("user1", usr);
+					request.getSession().setAttribute("user", usr);
 					RequestDispatcher rd = request.getRequestDispatcher("LoggedInServlet");
 					rd.forward(request, response);
 				}

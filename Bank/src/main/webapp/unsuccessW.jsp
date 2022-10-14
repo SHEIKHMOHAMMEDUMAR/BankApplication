@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="/WEB-INF/navBar.tld" prefix="x" %>
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 100%;">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,18 +14,20 @@
 <link rel="stylesheet" href="index2.css">
 <title>Withdrawal Unsuccessful</title>
 </head>
-<body>
+<body style="width: 100%; height: 100%;">
 <% String usr = (String) request.getSession().getAttribute("user"); %>
 <x:NavBar isLoggedIn = 'logged' menu = 'withdrawal' usr = "<%=usr %>" account ='true'></x:NavBar>
- <div class="wrapper"> 
+ <div style="width: 100%; height: 100%; background-color: #eee;">
+ <div class="wrapper" style="display: flex; justify-content: center; align-items: center;"> 
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> 
             <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
             <path class="checkmark_check" fill="none" d="M14.1 14.1l23.8 23.8 m0,-23.8 l-23.8,23.8"/>
         </svg>
     </div>
-    <div class='text-center' style = "margin-bottom: 10px">
-<h1 style='color: red; background-color:#eee'>Insufficent Fund</h1>
-	<h3 style='color: red; background-color:#eee'>Minimum balance should be: 1000 </h3>
+    <div class='text-center' style='color: red; background-color:#eee'>
+	<h1 >Insufficent Fund</h1>
+	<h3 >Minimum balance should be: 1000 </h3>
+	</div>
 	</div>
 </body>
 </html>
